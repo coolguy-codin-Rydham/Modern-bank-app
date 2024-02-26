@@ -4,7 +4,6 @@ import {
   CardDeal,
   Clients,
   CTA,
-  Feedback,
   Footer,
   Hero,
   Navbar,
