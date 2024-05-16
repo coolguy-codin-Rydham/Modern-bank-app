@@ -5,9 +5,9 @@ import { navLinks } from "../constants";
 const Navbar = () => {
   const [Toggle, setToggle] = useState(false);
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
+    <nav className="flex items-center justify-between w-full py-6 navbar">
       <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="items-center justify-end flex-1 hidden list-none sm:flex">
         {navLinks.map((nav, index) => {
           return (
             <li
@@ -21,7 +21,7 @@ const Navbar = () => {
           );
         })}
       </ul>
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="flex items-center justify-end flex-1 sm:hidden">
         <img
           src={Toggle ? close : menu}
           alt="Menu"
@@ -33,7 +33,7 @@ const Navbar = () => {
             Toggle ? "flex" : "hidden"
           } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
-          <ul className="list-none flex flex-col justify-end items-center flex-1">
+          <ul className="flex flex-col items-center justify-end flex-1 list-none">
             {navLinks.map((nav, index) => {
               return (
                 <li
